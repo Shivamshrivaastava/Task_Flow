@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+html, body, #root {
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Card style */
+.card {
+  @apply bg-white dark:bg-slate-800 shadow rounded-xl w-full overflow-hidden;
+}
+
+/* Reusable responsive grids */
+.resp-grid-4 {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4;
+}
+.resp-grid-2 {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+/* Calendar wrapper to prevent horizontal overflow */
+.calendar-wrap {
+  @apply w-full overflow-x-auto;
+}
