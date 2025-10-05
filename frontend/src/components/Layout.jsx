@@ -23,13 +23,13 @@ export default function Layout() {
 
   const [user, setUser] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [loading, setLoading] = useState(true); // 👈 New global loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadUser() {
       const { data } = await supabase.auth.getUser();
       if (data?.user) setUser(data.user);
-      setTimeout(() => setLoading(false), 800); // ⏳ brief skeleton delay
+      setTimeout(() => setLoading(false), 800);
     }
     loadUser();
   }, []);
@@ -48,7 +48,7 @@ export default function Layout() {
     { name: t("settings"), icon: Settings, path: "/settings" },
   ];
 
-  // 🌐 Language switcher (same as before)
+  // 🌐 Language switcher
   const LanguageSlider = () => (
     <div className="flex items-center gap-2">
       <Languages size={18} className="text-gray-500 dark:text-gray-300" />
@@ -146,8 +146,8 @@ export default function Layout() {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col md:ml-64 overflow-y-auto">
-        {/* Header */}
-        <header className="sticky top-0 z-30 bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-between px-4 py-3">
+        {/* ✅ Responsive Header */}
+        <header className="sticky top-0 z-30 bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-gray-700 shadow-sm flex flex-wrap items-center justify-between gap-3 px-4 py-3">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -160,14 +160,15 @@ export default function Layout() {
             </h2>
           </div>
 
-          <div className="flex items-center gap-4">
+          {/* ✅ Compact language + logout section */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <LanguageSlider />
             {user && (
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-2 px-3 py-1.5 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700 transition"
+                className="flex items-center gap-1.5 px-2.5 py-1 bg-red-600 text-white rounded-md text-xs sm:text-sm font-medium hover:bg-red-700 transition"
               >
-                <LogOut size={16} /> {t("logout")}
+                <LogOut size={14} /> {t("logout")}
               </button>
             )}
           </div>
@@ -180,3 +181,4 @@ export default function Layout() {
     </div>
   );
 }
+//updated
