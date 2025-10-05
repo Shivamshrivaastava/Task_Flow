@@ -166,9 +166,9 @@ export default function TasksPage() {
           {/* In Progress Section */}
           {filteredInProgress.length > 0 && (
             <section>
-              <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-3 flex items-center gap-2">
+              {/* <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-3 flex items-center gap-2">
                 {t("in_progress_tasks")}
-              </h3>
+              </h3> */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {filteredInProgress.map((task) => (
                   <TaskItem key={task.id} task={task} section="in_progress" />
