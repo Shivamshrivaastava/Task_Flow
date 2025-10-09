@@ -4,7 +4,7 @@ TaskFlow is a simple but high-quality **To-Do App** built with **React + Supabas
 It allows users to securely manage tasks with a clean, responsive, and mobile-friendly UI.
 
 ---
-# live - preview -> https://newtaskflow.netlify.app/
+# live - preview -> https://newmanagetask.netlify.app/
 ## 🚀 Features
 
 ### ✅ Core
@@ -25,15 +25,15 @@ It allows users to securely manage tasks with a clean, responsive, and mobile-fr
 
 - **UI/UX**
   - Modern responsive design using **TailwindCSS**  
-  - Sidebar navigation (desktop left / mobile bottom)  
-  - Gradient branding with TaskFlow logo  
+  - Sidebar navigation   
+  - TaskFlow logo  
   - Loading, empty, and error states handled  
 
 ### ⭐ Bonus
 - Dashboard with **task stats** (Total, Todo, In Progress, Done, Completion %).  
-- Calendar integration → hover on a date to see tasks (translated).  
+- Calendar integration → hover on a date to see tasks.  
 - Profile/Settings page with feature highlights.  
-- Mobile-friendly polish (bottom nav, safe padding).  
+- Mobile-friendly polish.  
 
 ---
 
@@ -143,7 +143,7 @@ npm run dev
    - Zustand store (`useTasks`) for global task state.  
 4. **i18n Integration** – Used i18next with JSON translations (English/Hindi). Ensured no hard-coded strings.  
 5. **UI/UX Polish** –  
-   - Sidebar with gradient branding.  
+   - Sidebar.  
    - Mobile responsiveness: bottom nav, safe padding.  
    - Dashboard stats & calendar integration.  
 6. **Testing** – Verified in both desktop and mobile views.  
@@ -152,7 +152,7 @@ npm run dev
 ---
 
 ## 🌐 Deployment
-- **Frontend:** [Vercel/Netlify link here]  
+- **Frontend:** netlify
 - **Backend:** Supabase project (self-hosted via Supabase dashboard).  
 
 ---
