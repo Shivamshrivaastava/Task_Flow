@@ -9,7 +9,7 @@ export const useTasks = create((set) => ({
   fetchTasks: async () => {
     set({ loading: true });
     try {
-      // ✅ Wait for Supabase to restore session
+      //  Wait for Supabase to restore session
       const { data: sessionData } = await supabase.auth.getSession();
       const user = sessionData?.session?.user;
       if (!user) {
