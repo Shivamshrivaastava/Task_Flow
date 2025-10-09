@@ -78,6 +78,7 @@
     " dashboard": "Dashboard",
     "app_name": "TaskFlow",
     "invalid_login": "Invalid login credentials",
-    "all":"all"
+    "all":"all",
+    "in_progress_tasks":"in_progress_tasks"
    
 }
