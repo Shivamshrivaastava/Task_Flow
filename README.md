@@ -5,6 +5,8 @@ It allows users to securely manage tasks with a clean, responsive, and mobile-fr
 
 ---
 # live - preview -> https://newmanagetask.netlify.app/
+---
+# walkthrough ->  https://youtu.be/nn9U57EkEB4
 ## 🚀 Features
 
 ### ✅ Core
