@@ -25,7 +25,7 @@ export default function TasksPage() {
   const [filteredInProgress, setFilteredInProgress] = useState([]);
   const [filteredDone, setFilteredDone] = useState([]);
 
-  // ✅ Fetch tasks when component mounts or user session restores
+  // Fetch tasks when component mounts or user session restores
   useEffect(() => {
     fetchTasks();
   }, [fetchTasks]);
